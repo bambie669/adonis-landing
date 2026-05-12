@@ -3,39 +3,39 @@ import { SectionHeader } from './Features'
 const STAGES = [
   {
     n: '01',
-    title: 'Ingest',
-    sub: 'yt-dlp + ffmpeg',
-    body: 'Download audio + video from YouTube / IG / FB / TikTok. Probe metadata. Persist the source row.',
+    title: 'Drop the link.',
+    sub: 'any URL, any platform',
+    body: "Paste a YouTube short, an Instagram reel, a Facebook video or a TikTok URL. Or drag in your own mp4. Adonis pulls down the source and notes the basics.",
   },
   {
     n: '02',
-    title: 'Preprocess',
-    sub: 'queue · video_preprocessing',
-    body: 'FFmpeg scene detection (configurable threshold). Frame extraction per scene. Resize + cache.',
+    title: 'Cut the tape.',
+    sub: 'scene by scene',
+    body: "It finds every cut, every beat, every moment the camera moves. Each scene becomes its own little card you can scrub through, frame by frame.",
   },
   {
     n: '03',
-    title: 'Stage-1 filter',
-    sub: 'queue · stage1_filter',
-    body: 'Cheap scoring: YOLO-nano, motion, face detection. Drop low-signal frames before the heavy stage runs.',
+    title: 'Skip the dead air.',
+    sub: 'keep what matters',
+    body: "Empty frames, static shots, throwaway time — filtered out. What's left are the moments the ad is actually working on you.",
   },
   {
     n: '04',
-    title: 'Stage-2 analyse',
-    sub: 'queue · stage2_analysis · GPU',
-    body: 'YOLOv8x, CLIP, VideoMAE, RetinaFace, EasyOCR. Per-scene aggregation → Hive-partitioned Parquet.',
+    title: 'See everything in it.',
+    sub: 'people · objects · text · mood',
+    body: "Faces, products, on-screen captions, body language, the action beats. Every visual signal in the ad, tagged and searchable.",
   },
   {
     n: '05',
-    title: 'Transcribe',
-    sub: 'queue · audio_transcription',
-    body: 'Whisper with word-timestamps. Warmth / brightness / pause / speaking-rate features per segment.',
+    title: 'Hear the script.',
+    sub: 'word-perfect transcript',
+    body: "Every line transcribed with timestamps. Plus the texture — when the pace speeds up, when the voice softens, where the pauses land.",
   },
   {
     n: '06',
-    title: 'Blueprint',
-    sub: 'gemini-flash-latest',
-    body: 'Per-role prompt + scene timeline + transcript → blueprint markdown. Cached, regeneratable.',
+    title: 'Read the playbook.',
+    sub: 'the why, in plain English',
+    body: "All of that, distilled into one written blueprint: hook, tension, payoff, call to action, and why this particular ad is converting in this particular ecosystem.",
   },
 ]
 
@@ -43,7 +43,7 @@ export function Pipeline() {
   return (
     <section id="pipeline" className="py-24 px-6">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader label="the chain" title="How a video moves through" />
+        <SectionHeader label="how it works" title="From a link to a playbook." />
 
         <div className="mt-16 space-y-3">
           {STAGES.map((s, i) => (
@@ -81,7 +81,7 @@ function Stage({
               {sub}
             </span>
           </div>
-          <p className="text-sm text-white/55 leading-relaxed">{body}</p>
+          <p className="text-sm text-white/60 leading-relaxed">{body}</p>
         </div>
       </div>
       {!last && (

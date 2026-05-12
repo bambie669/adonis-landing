@@ -1,22 +1,48 @@
 import { SectionHeader } from './Features'
 
-const STACK = {
-  Backend: ['FastAPI', 'Celery 5', 'PostgreSQL 15', 'Redis 7', 'SQLAlchemy 2', 'Pydantic 2'],
-  ML: ['PyTorch 2.5+cu121', 'OpenAI Whisper', 'YOLOv8x (Ultralytics)', 'CLIP (HF)', 'VideoMAE', 'RetinaFace', 'EasyOCR'],
-  Frontend: ['React 19', 'Vite 6', 'TanStack Router', 'TanStack Query', 'Zustand', 'Tailwind v4', 'WebGL shaders'],
-  Scraping: ['Patchright', 'ADB (Android automation)', 'Anti-detection profiles', 'Account pooling', 'Session warmup'],
-  Integrations: ['TikTok Display API', 'TikTok Login Kit', 'Meta Graph API', 'Gemini (google-genai)', 'Cloudflare Tunnel'],
-  Ops: ['Docker (Postgres + Redis)', 'Self-hosted Sentry', 'APScheduler', 'Hive-partitioned Parquet'],
+const VALUE_GROUPS = {
+  'What you walk away with': [
+    'A written playbook',
+    'Scene-by-scene visual map',
+    'Searchable transcript',
+    'Ad ecosystem map',
+    'Hook-by-hook timing',
+    'CTA placement read',
+  ],
+  "What you don't deal with": [
+    'No per-seat pricing',
+    'No cloud lock-in',
+    'No API rate limits',
+    'No token budgets',
+    'No leaked research',
+    'No vendor roadmap drama',
+  ],
+  'Built for': [
+    'Performance marketers',
+    'Growth teams',
+    'Indie founders',
+    'Creative agencies',
+    'Brand strategists',
+    'Anyone tired of guessing',
+  ],
+  'The unfair part': [
+    'Runs on your box',
+    'Your data stays yours',
+    'Yours forever',
+    'Updates on your schedule',
+    'Tune the voice yourself',
+    'Open source, end to end',
+  ],
 }
 
 export function Stack() {
   return (
     <section className="py-24 px-6 grid-bg">
       <div className="max-w-5xl mx-auto">
-        <SectionHeader label="under the hood" title="The stack" />
+        <SectionHeader label="why adonis" title="Made for the people doing the work." />
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-          {Object.entries(STACK).map(([category, items]) => (
+          {Object.entries(VALUE_GROUPS).map(([category, items]) => (
             <div key={category} className="card-hud rounded-lg p-6">
               <h3 className="text-xs font-mono uppercase tracking-widest text-mint-500/70 mb-4">
                 {category}
@@ -25,7 +51,7 @@ export function Stack() {
                 {items.map((item) => (
                   <span
                     key={item}
-                    className="text-sm font-mono text-white/75 bg-mint-500/5 border border-mint-500/15 rounded px-2 py-1"
+                    className="text-sm font-mono text-white/80 bg-mint-500/5 border border-mint-500/15 rounded px-2 py-1"
                   >
                     {item}
                   </span>
@@ -35,10 +61,10 @@ export function Stack() {
           ))}
         </div>
 
-        <p className="text-center text-sm font-mono text-white/40 mt-12 max-w-2xl mx-auto leading-relaxed">
-          Everything runs on a single Windows / Linux box. Docker for Postgres + Redis,
-          Python venv for the rest. Optional cluster mode splits CPU / GPU / coordinator
-          duties across machines via the built-in node registry.
+        <p className="text-center text-sm font-mono text-white/45 mt-12 max-w-2xl mx-auto leading-relaxed">
+          One box, your box. Drop a URL, walk away, come back to a playbook.
+          The research you do in Adonis is yours — not a SaaS provider's training data,
+          not a competitor's audit log, not a number in someone else's pricing tier.
         </p>
       </div>
     </section>

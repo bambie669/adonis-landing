@@ -1,44 +1,44 @@
 const FEATURES = [
   {
-    tag: 'transcribe',
-    title: 'Whisper, on your card',
+    tag: 'decode',
+    title: 'Every word. Every beat.',
     body:
-      'Drop a YouTube short, an IG reel, a TikTok URL or upload an mp4. Whisper-small/medium/large transcribes it locally on your GPU. No third-party round-trip, no token budget, no rate limits.',
+      "Drop a URL or upload an mp4 and you get a clean, timestamped transcript of the whole ad. Searchable, copy-pasteable, ready to drop straight into your own brief.",
     accent: 'mint' as const,
   },
   {
     tag: 'see',
-    title: 'Scene-by-scene visual analysis',
+    title: 'Read every scene like a script.',
     body:
-      'FFmpeg detects scene boundaries; the 4-stage Celery chain runs YOLOv8x (objects), CLIP (semantic similarity), VideoMAE (action), RetinaFace (people) and EasyOCR (on-screen text) on every keyframe. Results land in Hive-partitioned Parquet.',
+      "Adonis carves the ad into individual scenes, then tells you exactly what's happening in each one — who's on screen, what they're doing, what's in their hands, what's on the wall behind them. The visual grammar of the ad, laid out in order.",
     accent: 'orange' as const,
   },
   {
     tag: 'understand',
-    title: 'AI blueprints',
+    title: 'Get the why, not just the what.',
     body:
-      "After the pipeline lands, Gemini reads the transcript + scene timeline and writes a 'Blueprint' — what's the hook, what's the visual rhythm, which beat is the CTA, why does the post pull engagement. Override the prompt per role to match your voice.",
+      "After the breakdown lands, you get a written blueprint: where the hook is, where the tension peaks, which beat is the call to action, why the algorithm is rewarding this exact post. The kind of teardown a senior strategist would charge a few grand for.",
     accent: 'mint' as const,
   },
   {
-    tag: 'scrape',
-    title: 'Ad intelligence pool',
+    tag: 'map',
+    title: 'See every ad in their ecosystem.',
     body:
-      'The same box hosts an ADB-driven Facebook / Instagram / TikTok scraper with anti-detection, session warmup, and a workspace-scoped account pool. Sponsored posts get fingerprinted, deduped, and rolled up by advertiser frequency.',
+      "Studying one ad isn't enough. Adonis pulls every sponsored post around it — same advertiser, same niche, same target audience — and rolls them up so you see the cadence, the variants, the patterns nobody publishes.",
     accent: 'orange' as const,
   },
   {
     tag: 'connect',
-    title: 'TikTok Display + Meta Graph',
+    title: 'Plug in your own accounts.',
     body:
-      'OAuth flows for read-only TikTok own-content (user.info.basic + video.list) and Meta Page sync via Graph API. Encrypted at rest (Fernet). Quad-source ground-truth validated against ADB and TikHub.',
+      "Connect your TikTok or Meta page and your top-performing content shows up next to the competitive intel. Now you can A/B yourself against the people you're chasing — without exporting a thing.",
     accent: 'mint' as const,
   },
   {
-    tag: 'orchestrate',
-    title: 'Self-hosted, modular monolith',
+    tag: 'own',
+    title: 'Yours. On your machine. Forever.',
     body:
-      'FastAPI + Celery + PostgreSQL + Redis on one machine — or split across CPU / GPU / coordinator nodes via the cluster controller. Five subsystems (connectors, identity, pipeline, creative, signals) with narrow public surfaces, fast per-subsystem tests.',
+      "Adonis runs on your box — not in someone else's cloud, not behind someone else's paywall. Your research stays private, your data stays yours, and there's no monthly per-seat fee eating into your ad budget.",
     accent: 'orange' as const,
   },
 ]
@@ -47,7 +47,7 @@ export function Features() {
   return (
     <section className="py-24 px-6 grid-bg">
       <div className="max-w-6xl mx-auto">
-        <SectionHeader label="capabilities" title="What it does" />
+        <SectionHeader label="what you get" title="Reverse-engineer any ad, in minutes." />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
           {FEATURES.map((f) => (
             <FeatureCard key={f.tag} {...f} />
@@ -76,7 +76,7 @@ function FeatureCard({
         {tag}
       </div>
       <h3 className="font-serif text-2xl text-white/95 mb-3">{title}</h3>
-      <p className="text-sm text-white/60 leading-relaxed">{body}</p>
+      <p className="text-sm text-white/65 leading-relaxed">{body}</p>
     </div>
   )
 }

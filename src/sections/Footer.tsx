@@ -4,10 +4,10 @@ export function Footer() {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
           <div className="font-serif text-2xl text-white/95">
-            Adonis <span className="text-mint-500 glow-mint">Intelligent Ads</span>
+            Adonis — <span className="text-mint-500 glow-mint">Steal the Playbook</span>
           </div>
           <div className="text-xs font-mono uppercase tracking-widest text-white/35 mt-1">
-            video intelligence · ad intel · self-hosted
+            competitive intel · for video ads · stays on your box
           </div>
         </div>
 
@@ -18,7 +18,7 @@ export function Footer() {
             rel="noreferrer"
             className="text-white/55 hover:text-mint-500 transition-colors"
           >
-            github
+            run it yourself
           </a>
           <a
             href="https://github.com/cristidan94/adonis-smart-ads/blob/main/README.md"
@@ -26,15 +26,7 @@ export function Footer() {
             rel="noreferrer"
             className="text-white/55 hover:text-mint-500 transition-colors"
           >
-            readme
-          </a>
-          <a
-            href="https://github.com/cristidan94/adonis-smart-ads/blob/main/docs/decomposition-roadmap.md"
-            target="_blank"
-            rel="noreferrer"
-            className="text-white/55 hover:text-mint-500 transition-colors"
-          >
-            architecture
+            read the manual
           </a>
         </div>
       </div>
