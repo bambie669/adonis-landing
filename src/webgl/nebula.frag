@@ -56,10 +56,10 @@ float radialFalloff(vec3 p) {
 }
 
 float densityAt(vec3 p) {
-  vec3 q = p * 0.6 + uTime * vec3(0.02, 0.01, 0.03);
+  vec3 q = p * 0.5 + uTime * vec3(0.02, 0.01, 0.03);
   float n = fbm(q);
-  n = max(n + 0.15, 0.0);
-  return n * radialFalloff(p) * 1.6;
+  n = smoothstep(0.05, 0.6, n);
+  return n * radialFalloff(p) * 1.1;
 }
 
 float hg(float cosTheta, float g) {
@@ -80,8 +80,8 @@ void main() {
 
   vec3 lightDir = normalize(vec3(0.4, 0.6, -0.5));
 
-  int   steps    = (uQualityLow == 1) ? 24 : 48;
-  float stepSize = (uQualityLow == 1) ? 0.9 : 0.6;
+  int   steps    = (uQualityLow == 1) ? 18 : 32;
+  float stepSize = (uQualityLow == 1) ? 1.1 : 0.9;
   float t        = 0.0;
   vec3  accum    = vec3(0.0);
   float trans    = 1.0;
@@ -100,7 +100,7 @@ void main() {
 
       if (uQualityLow == 0) {
         float phase = hg(dot(rd, lightDir), 0.7);
-        neb += vec3(0.976, 0.451, 0.086) * phase * 0.45;
+        neb += vec3(0.976, 0.451, 0.086) * phase * 0.8;
       }
 
       float absorb = d * stepSize;
