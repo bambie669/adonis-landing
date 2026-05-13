@@ -490,6 +490,26 @@ body {
 .td { display: flex; flex-direction: column; max-height: 92vh; max-width: 1320px; }
 .td__head { display: flex; justify-content: space-between; align-items: flex-start; padding: 24px 28px 20px; border-bottom: 1px solid rgba(111, 209, 199, 0.12); background: rgba(255,255,255,0.015); gap: 16px; }
 .td__headLeft { display: flex; flex-direction: column; gap: 10px; }
+.td__picker { display: flex; gap: 4px; margin-bottom: 4px; flex-wrap: wrap; }
+.td__pickerItem {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 5px 10px; border-radius: 4px;
+  background: rgba(111, 209, 199, 0.04);
+  border: 1px solid rgba(111, 209, 199, 0.15);
+  color: var(--ink-65);
+  font-family: var(--font-mono); font-size: 10.5px;
+  letter-spacing: 0.08em; cursor: pointer;
+  transition: all 0.2s;
+}
+.td__pickerItem:hover { background: rgba(111, 209, 199, 0.08); color: #8eddd5; }
+.td__pickerItem.is-active {
+  background: rgba(249, 115, 22, 0.08);
+  border-color: rgba(249, 115, 22, 0.4);
+  color: #fb923c;
+}
+.td__pickerSep { color: rgba(255,255,255,0.2); }
+.td__pickerPlat { color: var(--ink-45); text-transform: lowercase; }
+.td__pickerItem.is-active .td__pickerPlat { color: rgba(251, 146, 60, 0.75); }
 .td__title { font-family: var(--font-serif); font-weight: 700; font-size: clamp(22px, 2.6vw, 30px); color: var(--ink-95); line-height: 1.15; }
 .td__meta { font-family: var(--font-mono); font-size: 11px; color: var(--ink-65); letter-spacing: 0.05em; }
 .td__sep { color: rgba(255,255,255,0.25); margin: 0 8px; }
