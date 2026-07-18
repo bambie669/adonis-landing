@@ -1,25 +1,15 @@
-import { Arrow } from '../components/Icons'
-
-interface Props {
-  onEnroll: () => void
-}
-
-export function Nav({ onEnroll }: Props) {
+export function Nav() {
   return (
-    <nav className="nav">
-      <div className="nav__logo">
-        Adonis<span className="mint">.</span>
+    <nav className="rnav">
+      <div className="rnav__logo">Adonis<b>.</b></div>
+      <div className="rnav__links">
+        <a href="#platform">Platform</a>
+        <a href="#pipeline">How it works</a>
+        <a href="#publish">Publishing</a>
       </div>
-      <div className="nav__links">
-        <a href="#features">features</a>
-        <a href="#pipeline">how it works</a>
-        <a href="#sample">sample</a>
-        <a href="#why">why</a>
-        <a href="https://github.com/cristidan94/adonis-smart-ads" target="_blank" rel="noreferrer">github</a>
-      </div>
-      <button className="btn btn--primary btn--small" onClick={onEnroll}>
-        Enroll for launch <Arrow />
-      </button>
+      <a className="rnav__cta" href="https://use-adonis.com" target="_blank" rel="noreferrer">
+        Open Adonis →
+      </a>
     </nav>
   )
 }

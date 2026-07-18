@@ -1,77 +1,39 @@
-import { HeroDemoWrapped } from './HeroDemo'
-import { Arrow, GhIcon } from '../components/Icons'
-
-interface Props {
-  onEnroll: () => void
-  onOpenSample: () => void
-}
-
-export function Hero({ onEnroll, onOpenSample }: Props) {
+export function Hero() {
   return (
-    <section className="hero hud-frame">
-      <div className="hero__bg" />
-
-      <div className="wrap hero__inner">
-        <div className="pill">
-          <span className="dot" />
-          competitive intel · for video ads · v0.4 live
-        </div>
-
-        <h1 className="hero__h1">
-          <span className="hero__h1Top">Stop spending ten hours</span>
-          <span className="hero__h1Top">on manual ad breakdowns.</span>
-          <span className="hero__h1Bot glow-mint">Get the playbook in three minutes.</span>
-        </h1>
-
-        <p className="hero__sub">
-          Adonis ingests any video ad — YouTube, Instagram, Facebook, TikTok — and writes
-          the kind of teardown a senior strategist would charge a few grand for.
-          Scene by scene. Hook by hook.{' '}
-          <span className="mint">In the time it takes to refill your coffee.</span>
-        </p>
-
-        <div className="hero__ctas">
-          <button className="btn btn--primary" onClick={onEnroll}>
-            Enroll for launch <Arrow />
-          </button>
-          <button className="btn btn--ghost" onClick={onOpenSample}>
-            See a sample teardown
-          </button>
-          <a
-            className="hero__ghLink"
-            href="https://github.com/cristidan94/adonis-smart-ads"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GhIcon /> source on github
-          </a>
-        </div>
-
-        <div className="hero__demoWrap">
-          <div className="hero__demoLabel font-mono">
-            <span><span className="dot" /> live demo · runs in your browser · no upload required</span>
-            <span className="muted">~3 min in production · sped up here</span>
+    <section className="rhero" id="platform">
+      <div className="wrap-r rhero__inner">
+        <div>
+          <div className="eyebrow"><span className="dot" />Ad intelligence · live</div>
+          <h1>Run your entire ad<br />operation from <span className="o">one deck.</span></h1>
+          <p className="rhero__sub">
+            Adonis reads the ads that are winning, turns the pattern into content, and
+            publishes it across every platform — while it audits your pages and surfaces
+            warm leads.
+          </p>
+          <div className="rhero__ctas">
+            <a className="btn-o" href="https://use-adonis.com" target="_blank" rel="noreferrer">Open Adonis →</a>
+            <a className="link-mono" href="#pipeline">see how it works</a>
           </div>
-          <HeroDemoWrapped speed="normal" />
         </div>
 
-        <div className="hero__stats">
-          <Stat label="Platforms" value="4" detail="YouTube · Instagram · Facebook · TikTok" />
-          <Stat label="Signals tracked" value="30+" detail="hooks · cuts · faces · sentiment · scenes · audio" />
-          <Stat label="Time per ad" value="~3 min" detail="from URL to a written playbook" />
-          <Stat label="Stays private" value="100% local" detail="your research never leaves your machine" />
+        <div className="console">
+          <div className="console__scan" />
+          <div className="console__in">
+            <div className="console__top"><span>◉ pipeline</span><span className="g">4 platforms · live</span></div>
+            <div className="pipe">
+              <div className="pipe__s on">ANALYZE</div>
+              <div className="pipe__s on">CREATE</div>
+              <div className="pipe__s on">PUBLISH</div>
+              <div className="pipe__s">AUDIT</div>
+            </div>
+            <div className="cells">
+              <div className="cell"><div className="k">Signals</div><div className="v c">30+</div></div>
+              <div className="cell"><div className="k">Per ad</div><div className="v">~3<span style={{ fontSize: 13 }}> min</span></div></div>
+              <div className="cell"><div className="k">Queued</div><div className="v o">12</div></div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
-  )
-}
-
-function Stat({ label, value, detail }: { label: string; value: string; detail: string }) {
-  return (
-    <div className="stat hud-frame">
-      <div className="stat__label">{label}</div>
-      <div className="stat__value">{value}</div>
-      <div className="stat__detail">{detail}</div>
-    </div>
   )
 }
