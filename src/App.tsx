@@ -1,6 +1,6 @@
 import { Nav } from './sections/Nav'
 import { Hero } from './sections/Hero'
-import { Platform, HowItWorks, PublishEverywhere, Stats, Closing, SiteFooter } from './sections/sections'
+import { TrustStrip, Platform, HowItWorks, PublishEverywhere, Stats, Closing, SiteFooter } from './sections/sections'
 
 export function App() {
   return (
@@ -9,6 +9,7 @@ export function App() {
       <Nav />
       <main>
         <Hero />
+        <TrustStrip />
         <Platform />
         <HowItWorks />
         <PublishEverywhere />

@@ -127,7 +127,30 @@ export function Closing() {
     <section className="rsection wrap-r closing">
       <h2>Run your next campaign <span className="o">on Adonis.</span></h2>
       <p>The whole loop — analyze, generate, publish, audit, convert — in one deck. Open it and ship something today.</p>
-      <a className="btn-o" href="https://use-adonis.com" target="_blank" rel="noreferrer">Open Adonis →</a>
+      <a className="btn-o" href="https://use-adonis.com" target="_blank" rel="noreferrer">Analyze your first ad — free →</a>
+      <div className="closing__assure">No credit card · cancel anytime · your research stays yours</div>
+    </section>
+  )
+}
+
+const ASSURANCES = [
+  'Free to start — no card',
+  'Your data stays yours',
+  'Cancel anytime',
+  '4 platforms, one deck',
+]
+
+export function TrustStrip() {
+  return (
+    <section className="trustsec">
+      <div className="trust">
+        {ASSURANCES.map((a) => (
+          <span className="trust__i" key={a}>
+            <I d="M20 6 9 17l-5-5" />
+            {a}
+          </span>
+        ))}
+      </div>
     </section>
   )
 }

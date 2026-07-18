@@ -11,9 +11,10 @@ export function Hero() {
             warm leads.
           </p>
           <div className="rhero__ctas">
-            <a className="btn-o" href="https://use-adonis.com" target="_blank" rel="noreferrer">Open Adonis →</a>
+            <a className="btn-o" href="https://use-adonis.com" target="_blank" rel="noreferrer">Analyze your first ad — free →</a>
             <a className="link-mono" href="#pipeline">see how it works</a>
           </div>
+          <div className="rhero__assure">Free to start · no credit card · first teardown in ~3 min</div>
         </div>
 
         <div className="console">

@@ -8,7 +8,7 @@ export function Nav() {
         <a href="#publish">Publishing</a>
       </div>
       <a className="rnav__cta" href="https://use-adonis.com" target="_blank" rel="noreferrer">
-        Open Adonis →
+        Start free →
       </a>
     </nav>
   )

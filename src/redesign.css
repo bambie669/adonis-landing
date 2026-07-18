@@ -212,3 +212,13 @@
 .rfoot__bottom { margin-top:44px; padding-top:22px; border-top:1px solid var(--line); display:flex; justify-content:space-between;
   color:var(--mut); font:400 13px/1.4 var(--f-body); }
 @media(max-width:820px){ .rfoot__grid{ grid-template-columns:1fr 1fr; gap:26px; } .rfoot__bottom{ flex-direction:column; gap:8px; } }
+
+/* ─── risk-reversal microcopy + trust strip ───────────────── */
+.rhero__assure { margin-top: 18px; color: var(--mut); font: 500 13px/1.5 var(--f-mono); letter-spacing: .01em; }
+.closing__assure { margin-top: 20px; color: var(--mut-2); font: 500 12.5px/1.5 var(--f-mono); letter-spacing: .04em; }
+/* own vertical padding — deliberately NOT .wrap-r (that class zeroes vertical padding) */
+.trustsec { padding: clamp(8px,1.5vh,18px) 28px clamp(46px,7vh,80px); }
+.trust { max-width: var(--maxw); margin: 0 auto; display:flex; flex-wrap:wrap; justify-content:center; gap: 12px 30px; }
+.trust__i { display:inline-flex; align-items:center; gap: 9px; color: var(--mut); font: 500 13.5px/1 var(--f-body); }
+.trust__i svg { width:16px; height:16px; color: var(--cyan); flex:none; }
+@media(max-width:820px){ .trust { gap: 11px 20px; } .trust__i { font-size: 12.5px; } }
