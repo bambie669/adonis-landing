@@ -151,7 +151,7 @@ export function SiteFooter() {
           <div className="rfoot__col">
             <h5>Company</h5>
             <a href="https://use-adonis.com" target="_blank" rel="noreferrer">App</a>
-            <a href="https://github.com/cristidan94/adonis-smart-ads" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="mailto:bogdancovaci100@gmail.com">Contact</a>
           </div>
           <div className="rfoot__col">
             <h5>Legal</h5>
