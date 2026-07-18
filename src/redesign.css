@@ -61,7 +61,13 @@
   color:#0A0E17; background: var(--orange); padding: 11px 17px; border-radius: 10px;
   box-shadow: 0 8px 22px -8px rgba(255,122,24,.6); transition: transform .16s, box-shadow .16s; }
 .rnav__cta:hover { transform: translateY(-1px); box-shadow: 0 12px 26px -8px rgba(255,122,24,.7); }
-@media(max-width:820px){ .rnav__links{ display:none; } }
+.rnav__right { display:flex; align-items:center; gap: 14px; }
+.langtog { display:inline-flex; gap:2px; padding:3px; border:1px solid var(--line); border-radius:10px; background: rgba(255,255,255,.02); }
+.langtog__b { font: 600 11.5px/1 var(--f-mono); letter-spacing:.08em; color: var(--mut); background:transparent;
+  border:0; padding: 6px 9px; border-radius:7px; cursor:pointer; transition: color .15s, background .15s; }
+.langtog__b:hover { color: var(--txt); }
+.langtog__b.on { color: var(--ink); background: var(--cyan); }
+@media(max-width:820px){ .rnav__links{ display:none; } .rnav__right{ gap:10px; } }
 
 /* ─── HERO (Direction A) ──────────────────────────────────── */
 .rhero { padding: clamp(56px,9vh,110px) 0 90px; }
