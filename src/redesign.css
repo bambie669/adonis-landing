@@ -195,13 +195,13 @@
 @media(max-width:820px){ .stats{ grid-template-columns:1fr 1fr; } }
 
 /* ─── closing cta ─────────────────────────────────────────── */
-.closing { text-align:center; padding-bottom: clamp(104px,14vh,164px); }
+.closing { text-align:center; }
 .closing h2 { font:700 clamp(30px,4.6vw,54px)/1.05 var(--f-display); color:var(--txt); max-width:18ch; margin:0 auto 26px; }
 .closing h2 .o { color: var(--orange); }
 .closing p { color:var(--mut); font:400 17px/1.6 var(--f-body); max-width:48ch; margin:0 auto 30px; }
 
 /* ─── footer ──────────────────────────────────────────────── */
-.rfoot { border-top:1px solid var(--line); padding:56px 0 40px; }
+.rfoot { border-top:1px solid var(--line); padding:56px 0 40px; margin-top: clamp(90px,12vh,140px); }
 .rfoot__grid { display:grid; grid-template-columns:1.7fr 1fr 1fr 1fr; gap:32px; }
 .rfoot__brand .logo { font:700 20px/1 var(--f-display); } .rfoot__brand .logo b{ color:var(--orange); }
 .rfoot__brand p { color:var(--mut); font:400 14px/1.6 var(--f-body); margin-top:12px; max-width:34ch; }
